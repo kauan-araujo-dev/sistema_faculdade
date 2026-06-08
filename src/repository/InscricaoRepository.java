@@ -26,15 +26,11 @@ public class InscricaoRepository implements RepositoryInterface, IdIncrementoInt
 	public void cadastrar(Inscricao inscricao) {
 		inscricoes.addLast(inscricao);
 		try {
-
 			registrarCSV();
 			int size = inscricoes.size();
-			System.out.println("Size: " + size);
 
 			for (int i = 0; i < size; i++) {
 				Inscricao inscricaoAux = inscricoes.get(i);
-
-				System.out.println("CPF: " + inscricaoAux.getCpf());
 			}
 
 		} catch (Exception e) {

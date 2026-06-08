@@ -63,11 +63,9 @@ public class InscricaoService {
 		for (int i = 0; i < inscricoes.length; i++) {
 			Inscricao inscricao = inscricoes[i];
 			Disciplina disciplina = disciplinaService.consultarDisciplina(inscricao.getCodigoDisciplina());
-			System.out.println(inscricao.getCodigoDisciplina() + " " + disciplina);
 			int posicao = hash(disciplina.getCodigo(), tamanho);
 
 			disciplinasAbertas[posicao].addLast(disciplina);
-			;
 		}
 	}
 
